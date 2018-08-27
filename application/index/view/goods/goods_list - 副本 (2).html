@@ -1,0 +1,791 @@
+{layout name="layout/layout" /}
+<!-- start 顶部 --><!-- start 右边固定工具栏 -->
+<div class="toolbar">
+	<ul>
+		<li><a href="/member.html" class="me"></a><span><a href="/member.html">个人中心</a></span></li>
+		<li><a href="/cart.html" class="cart"></a><b class="cartcount">0</b><span><a href="/cart.html">购物车</a></span></li>
+		<li><a href="http://kefu.ziyun.com.cn/vclient/chat/?websiteid=105003" class="service"></a><span><a href="http://kefu.ziyun.com.cn/vclient/chat/?websiteid=105003">客服</a></span></li>
+		<li><a href="javascript:scroll(0,0)" class="back-top"></a></li>
+	</ul>
+</div>
+<!-- 右边固定工具栏 end -->
+<div class="top">
+	<div class="m">
+		<ul class="pull-left">
+			<li>欢迎访问我爱美商城</li>
+			<li>请<a href="/login.html">登录</a></li>
+			<li class="spacer"></li>
+			<li><a href="/regist.html">注册</a></li>
+			<li class="spacer"></li>
+			<li class="hover-w redFont">商城APP下载
+			<div class="hover-w-ewm">
+				<img src="picture/20160912022826187_3.png" alt="">
+			</div>
+			</li>
+			<li class="spacer"></li>
+			<li class="location">
+				贵港
+			<div class="location-con">
+				<a href="/products/549.html?user_region_id=76">广州</a>
+				<a href="/products/549.html?user_region_id=385">嘉兴</a>
+				<a href="/products/549.html?user_region_id=388">宁波</a>
+				<a href="/products/549.html?user_region_id=390">台州</a>
+			</div>
+			</li>
+		</ul>
+		<ul class="pull-right">
+			<li id="signIn">
+			<span class="redFont">签到抢钱</span>
+			<div class="signIn-pop center" id="signIn-pop">
+				<div class="signIn-arrow">
+				</div>
+				<div class="signIn-header redFont">
+					<p class="text">
+						你还没登录呢
+					</p>
+				</div>
+				<div>
+					<p>
+						签到规则：每天签到获得2元代金券，每连续签到第7天获得10元，间断就重新开始计算。
+					</p>
+					<p>
+						例：某会员连续签到7天，可获得代金券：2*6 + 1*10 = 22元。
+					</p>
+				</div>
+			</div>
+			</li>
+			<li class="spacer"></li>
+			<li><a href="/cart.html">我的购物车</a></li>
+			<li class="spacer"></li>
+			<li><a href="/orders.html">我的订单</a></li>
+			<li class="spacer"></li>
+			<li><a href="/member.html">会员中心</a></li>
+		</ul>
+	</div>
+</div>
+<script>
+var signin_url="/member/member/signin.html";
+</script>
+<!-- 顶部 end--><!-- start 头部 -->
+<div class="header">
+	<div class="m">
+		<div class="logo">
+			<a href="/"><img src="picture/20160912022743749_3.png" alt=""></a>
+		</div>
+		<div class="search">
+			<div class="form">
+				<form onsubmit="return checkform();" method="get" action="/search/search.html" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" target="_blank">
+					<input type="text" id="searchkey" name="key" value="" class="text" placeholder='输入关键字'>
+					<input type="submit" value="搜索" class="sub">
+				</form>
+			</div>
+			<ul class="hotwords">
+				<li><a href="/search/search.html?key=%E6%B4%97%E5%8F%91%E9%9C%B2" target="_blank">洗发露</a></li>
+				<li><a href="/search/search.html?key=%E6%9F%93%E8%86%8F" target="_blank">染膏</a></li>
+				<li><a href="/search/search.html?key=%E7%94%B5%E5%90%B9%E9%A3%8E" target="_blank">电吹风</a></li>
+				<li><a href="/search/search.html?key=%E7%94%B5%E6%8E%A8%E5%89%AA" target="_blank">电推剪</a></li>
+				<li><a href="/search/search.html?key=%E5%89%AA%E5%88%80" target="_blank">剪刀</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 头部 end --><!-- start 导航 -->
+<div class="nav">
+	<div class="nav-con m">
+		<!-- start C端导航 -->
+		<ul class="nav-items-c">
+			<li>
+			<a href="/">首页</a>
+			</li>
+			<li><a href="/products/549.html" class="redFont" target="_blank">洗发</a>
+			<div class="nav-item-con">
+				<a href="/products/550.html" target="_blank">洗发水</a>
+			</div>
+			</li>
+			<li><a href="/products/547.html" target="_blank">染发</a>
+			<div class="nav-item-con">
+				<a href="/products/555.html" target="_blank">染发膏</a>
+			</div>
+			</li>
+			<li><a href="/products/548.html" target="_blank">护发</a>
+			<div class="nav-item-con">
+				<a href="/products/551.html" target="_blank">造型乳</a>
+				<a href="/products/552.html" target="_blank">焗油</a>
+				<a href="/products/553.html" target="_blank">精油</a>
+				<a href="/products/554.html" target="_blank">护发素</a>
+			</div>
+			</li>
+			<li><a href="/products/546.html" target="_blank">美发器具</a>
+			<div class="nav-item-con">
+				<a href="/products/556.html" target="_blank">电推剪</a>
+				<a href="/products/557.html" target="_blank">电夹板</a>
+				<a href="/products/558.html" target="_blank">电吹风</a>
+			</div>
+			</li>
+			<li><a href="/products/559.html" target="_blank">美容护肤</a>
+			<div class="nav-item-con">
+				<a href="/products/566.html" target="_blank">面膜</a>
+				<a href="/products/565.html" target="_blank">脸部精油</a>
+				<a href="/products/564.html" target="_blank">精华露</a>
+				<a href="/products/567.html" target="_blank">沐浴露</a>
+				<a href="/products/563.html" target="_blank">洁面乳</a>
+				<a href="/products/562.html" target="_blank">润肤乳</a>
+				<a href="/products/561.html" target="_blank">卸妆</a>
+				<a href="/products/560.html" target="_blank">套装</a>
+			</div>
+			</li>
+			<li><a href="/products/574.html" target="_blank">沐足用品</a>
+			<div class="nav-item-con">
+			</div>
+			</li>
+			<li><a href="/search/search.html?key=%E7%89%B9%E4%BB%B7" target="_blank">特价专区</a></li>
+			<li>
+			<a href=" /education.html">爱美资讯</a>
+			<div class="nav-item-con">
+				<a href="/education.html" target="_blank">视频资讯</a>
+				<a href="/education/article-list.html" target="_blank">爱美话题</a>
+			</div>
+			</li>
+		</ul>
+		<!-- end C端导航 -->
+		<!-- end B端导航 -->
+	</div>
+</div>
+<!-- 导航 end --><!-- start 主要内容 -->
+<div class="content m">
+	<!--start 面包屑 -->
+	<div class="root-nav">
+		<div class="breadcrumb">
+			<strong><a href="/products/549.html">洗发</a></strong>
+		</div>
+	</div>
+	<!-- 面包屑 end -->
+	<div class="main">
+		<div class="attrs m">
+			<div id="cates" class="item">
+				<div class="attr-name pull-left">
+					分类
+				</div>
+				<ul class="">
+					<li><a class="" href="/products/0.html?key=&section=&brandid=&order=&sort=">全部</a></li>
+					<li><a class="" href="/products/550.html?key=&section=&brandid=&order=&sort=">洗发水</a></li>
+				</ul>
+				<div class="more pull-right">
+					更多
+				</div>
+				<div class="clearfix">
+				</div>
+			</div>
+			<div class="item">
+				<div class="attr-name pull-left">
+					价格
+				</div>
+				<ul>
+					<li><a class="redFont" href="/products/549.html?key=&section=&brandid=&order=&sort=">全部</a></li>
+					<li><a class="" href="/products/549.html?key=&section=0-99&brandid=&order=&sort=">0-99</a></li>
+					<li><a class="" href="/products/549.html?key=&section=100-199&brandid=&order=&sort=">100-199</a></li>
+					<li><a class="" href="/products/549.html?key=&section=200-299&brandid=&order=&sort=">200-299</a></li>
+					<li><a class="" href="/products/549.html?key=&section=300-399&brandid=&order=&sort=">300-399</a></li>
+					<li><a class="" href="/products/549.html?key=&section=400-499&brandid=&order=&sort=">400-499</a></li>
+					<li><a class="" href="/products/549.html?key=&section=500%25E4%25BB%25A5%25E4%25B8%258A&brandid=&order=&sort=">500以上</a></li>
+				</ul>
+				<div class="clearfix">
+				</div>
+			</div>
+			<div class="item">
+				<div class="attr-name pull-left">
+					品牌
+				</div>
+				<ul>
+					<li><a class="redFont" href="/products/549.html?key=&section=&brandid=&order=&sort=">全部</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=48&order=&sort=">汉迪</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=52&order=&sort=">垂度</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=53&order=&sort=">芊彩</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=54&order=&sort=">琴叶</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=55&order=&sort=">丝露杰</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=58&order=&sort=">雨花旗</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=101&order=&sort=">佳佳利</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=116&order=&sort=">品诺</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=124&order=&sort=">东田洋</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=135&order=&sort=">帝昊</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=147&order=&sort=">欧莱雅</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=148&order=&sort=">资生堂</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=197&order=&sort=">新琪</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=202&order=&sort=">歌秀</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=212&order=&sort=">优姿彩</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=227&order=&sort=">施华蔻</a></li>
+					<li><a class="" href="/products/549.html?key=&section=&brandid=231&order=&sort=">朵美莱</a></li>
+				</ul>
+				<div class="more pull-right">
+					更多
+				</div>
+				<div class="clearfix">
+				</div>
+			</div>
+		</div>
+		<!-- start 商品 -->
+		<div class="product">
+			<div class="product-con">
+				<!-- 相关推荐 -->
+				<div class="left pull-left">
+					<h3><span>相关推荐</span></h3>
+					<ul>
+						{foreach $goods_list as $v}
+						<li>
+						<a title="资生堂(SHISEIDO)护理道 水活修护洗发露（受损干枯发质使用)" href="/goods/1752.html" class="item-img" target="_blank">
+						<img src="{$v.smallpic}" alt="">
+						</a>
+						<div>
+							<a class="omit" title="资生堂(SHISEIDO)护理道 水活修护洗发露（受损干枯发质使用)" href="/goods/1752.html" target="_blank">资生堂(SHISEIDO)护理道 水活修护洗发露（受损干枯发质使用)</a>
+							<div class="price">
+								<span class="redFont">￥196.00</span>
+								<span class="grayFont"><s>￥190.00</s></span>
+							</div>
+						</div>
+						</li>
+						{/foreach}
+						<li>
+						<a title="琴叶彩桐树多效修护洗发露750ml" href="/goods/2406.html" class="item-img" target="_blank">
+						<img src="picture/thumb_57568fbc39387_1.jpg" alt="">
+						</a>
+						<div>
+							<a class="omit" title="琴叶彩桐树多效修护洗发露750ml" href="/goods/2406.html" target="_blank">琴叶彩桐树多效修护洗发露750ml</a>
+							<div class="price">
+								<span class="redFont">￥108.00</span>
+								<span class="grayFont"><s>￥138.00</s></span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<a title="芊彩欧美风.控油平衡洗发露500ml" href="/goods/2690.html" class="item-img" target="_blank">
+						<img src="picture/thumb_55810f4084e51_1.jpg" alt="">
+						</a>
+						<div>
+							<a class="omit" title="芊彩欧美风.控油平衡洗发露500ml" href="/goods/2690.html" target="_blank">芊彩欧美风.控油平衡洗发露500ml</a>
+							<div class="price">
+								<span class="redFont">￥50.00</span>
+								<span class="grayFont"><s>￥90.00</s></span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<a title="新琪奥丽滋养护理系列清爽控油洗发露 " href="/goods/2843.html" class="item-img" target="_blank">
+						<img src="picture/thumb_564ad4ef13c9e.jpg" alt="">
+						</a>
+						<div>
+							<a class="omit" title="新琪奥丽滋养护理系列清爽控油洗发露 " href="/goods/2843.html" target="_blank">新琪奥丽滋养护理系列清爽控油洗发露 </a>
+							<div class="price">
+								<span class="redFont">￥98.00</span>
+								<span class="grayFont"><s>￥118.00</s></span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<a title="我爱美香疗贵族净爽水润洗发露5L" href="/goods/2856.html" class="item-img" target="_blank">
+						<img src="picture/thumb_5760f2e0ac236_1.jpg" alt="">
+						</a>
+						<div>
+							<a class="omit" title="我爱美香疗贵族净爽水润洗发露5L" href="/goods/2856.html" target="_blank">我爱美香疗贵族净爽水润洗发露5L</a>
+							<div class="price">
+								<span class="redFont">￥60.00</span>
+								<span class="grayFont"><s>￥130.00</s></span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<a title="新琪姜汁王营养柔顺洗发露300ml" href="/goods/3649.html" class="item-img" target="_blank">
+						<img src="picture/thumb_564ad942848f8_1.jpg" alt="">
+						</a>
+						<div>
+							<a class="omit" title="新琪姜汁王营养柔顺洗发露300ml" href="/goods/3649.html" target="_blank">新琪姜汁王营养柔顺洗发露300ml</a>
+							<div class="price">
+								<span class="redFont">￥18.00</span>
+								<span class="grayFont"><s>￥25.00</s></span>
+							</div>
+						</div>
+						</li>
+					</ul>
+				</div>
+				<!-- 商品列表 -->
+				<div class="right pull-right">
+					<div class="right-top">
+						<div>
+							<a href="/products/549.html?key=&section=&brandid=0&order=&sort=">综合排序</a>
+							<a href='/products/549.html?key=&section=&brandid=0&order=1&sort=2' target='_self'>销量<i class=''></i></a><a href='/products/549.html?key=&section=&brandid=0&order=2&sort=2' target='_self'>价格<i class=''></i></a>
+						</div>
+						<div class="page pull-right">
+							<span class="page-now pull-left">
+							<b class="redFont">
+							<b>1/4</b>页 																				</b>&nbsp;
+							</span>
+							<a class='next pull-left' href='/products/549.html?&page=2' target='_self'><b>&gt;</b></a>
+						</div>
+					</div>
+					<ul class="product-list">
+						{foreach $goods_list as $v}
+						<li>
+						<div class="item-img">
+							<a title="新琪海藻营养滋润洗发乳5L" href="/goods/6554.html" target="_blank">
+							<img src="{$v.smallpic}" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="新琪海藻营养滋润洗发乳5L" href="/goods/6554.html" target="_blank">新琪海藻营养滋润洗发乳5L</a>
+							<div class="sales-vol">
+								销量：1632
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥50.00</b></span>
+								<span class="grayFont">￥70.00</span>
+							</div>
+						</div>
+						</li>
+						{/foreach}
+						<li>
+						<div class="item-img">
+							<a title="朵美莱·尊贵版水漾滋润洗发露738ml（买十送一，买二十一送三）" href="/goods/6527.html" target="_blank">
+							<img src="picture/thumb_20171215112635741_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="朵美莱·尊贵版水漾滋润洗发露738ml（买十送一，买二十一送三）" href="/goods/6527.html" target="_blank">朵美莱·尊贵版水漾滋润洗发露738ml（买十送一，买二十一送三）</a>
+							<div class="sales-vol">
+								销量：417
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥128.00</b></span>
+								<span class="grayFont">￥148.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="朵美莱·尊贵版控油清新洗发露738ml（买十送一，买二十一送三）" href="/goods/6526.html" target="_blank">
+							<img src="picture/thumb_20171215112736278_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="朵美莱·尊贵版控油清新洗发露738ml（买十送一，买二十一送三）" href="/goods/6526.html" target="_blank">朵美莱·尊贵版控油清新洗发露738ml（买十送一，买二十一送三）</a>
+							<div class="sales-vol">
+								销量：721
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥128.00</b></span>
+								<span class="grayFont">￥148.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="朵美莱·尊贵版清爽去屑洗发露738ml（买十送一，买二十一送三）" href="/goods/6525.html" target="_blank">
+							<img src="picture/thumb_20171215112757237_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="朵美莱·尊贵版清爽去屑洗发露738ml（买十送一，买二十一送三）" href="/goods/6525.html" target="_blank">朵美莱·尊贵版清爽去屑洗发露738ml（买十送一，买二十一送三）</a>
+							<div class="sales-vol">
+								销量：662
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥128.00</b></span>
+								<span class="grayFont">￥148.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="新琪温莎·酵素祛屑止痒洗发乳500ml（冰疗）" href="/goods/6523.html" target="_blank">
+							<img src="picture/thumb_20170406045245894_1.gif" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="新琪温莎·酵素祛屑止痒洗发乳500ml（冰疗）" href="/goods/6523.html" target="_blank">新琪温莎·酵素祛屑止痒洗发乳500ml（冰疗）</a>
+							<div class="sales-vol">
+								销量：669
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥50.00</b></span>
+								<span class="grayFont">￥65.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="佳佳利黑钻世家滋润柔顺洗发露480ml" href="/goods/6463.html" target="_blank">
+							<img src="picture/thumb_20170517020048893_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="佳佳利黑钻世家滋润柔顺洗发露480ml" href="/goods/6463.html" target="_blank">佳佳利黑钻世家滋润柔顺洗发露480ml</a>
+							<div class="sales-vol">
+								销量：586
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥88.00</b></span>
+								<span class="grayFont">￥108.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="垂度奈香滋润洗发水500ml" href="/goods/6259.html" target="_blank">
+							<img src="picture/thumb_20170111120103235_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="垂度奈香滋润洗发水500ml" href="/goods/6259.html" target="_blank">垂度奈香滋润洗发水500ml</a>
+							<div class="sales-vol">
+								销量：395
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥75.00</b></span>
+								<span class="grayFont">￥90.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="佳佳利黑钻世家控油平衡洗发露480ml" href="/goods/6103.html" target="_blank">
+							<img src="picture/thumb_20161222055934213_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="佳佳利黑钻世家控油平衡洗发露480ml" href="/goods/6103.html" target="_blank">佳佳利黑钻世家控油平衡洗发露480ml</a>
+							<div class="sales-vol">
+								销量：2108
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥88.00</b></span>
+								<span class="grayFont">￥108.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="佳佳利黑钻世家去屑调理洗发露480ml" href="/goods/6102.html" target="_blank">
+							<img src="picture/thumb_20161222055526170_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="佳佳利黑钻世家去屑调理洗发露480ml" href="/goods/6102.html" target="_blank">佳佳利黑钻世家去屑调理洗发露480ml</a>
+							<div class="sales-vol">
+								销量：1526
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥88.00</b></span>
+								<span class="grayFont">￥108.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="帝昊香舍丽人滋养柔顺洗发露800ml" href="/goods/6081.html" target="_blank">
+							<img src="picture/thumb_20161221041928421_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="帝昊香舍丽人滋养柔顺洗发露800ml" href="/goods/6081.html" target="_blank">帝昊香舍丽人滋养柔顺洗发露800ml</a>
+							<div class="sales-vol">
+								销量：150
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥100.00</b></span>
+								<span class="grayFont">￥120.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="欧莱雅/LOREAL 专家洗护系列顺柔润泽洗发露1.5L" href="/goods/6078.html" target="_blank">
+							<img src="picture/thumb_20161220040813570_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="欧莱雅/LOREAL 专家洗护系列顺柔润泽洗发露1.5L" href="/goods/6078.html" target="_blank">欧莱雅/LOREAL 专家洗护系列顺柔润泽洗发露1.5L</a>
+							<div class="sales-vol">
+								销量：200
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥190.00</b></span>
+								<span class="grayFont">￥238.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="欧莱雅/LOREAL 沙龙洗护致臻修护洗发露500ml" href="/goods/6075.html" target="_blank">
+							<img src="picture/thumb_20161220035634741_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="欧莱雅/LOREAL 沙龙洗护致臻修护洗发露500ml" href="/goods/6075.html" target="_blank">欧莱雅/LOREAL 沙龙洗护致臻修护洗发露500ml</a>
+							<div class="sales-vol">
+								销量：150
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥128.00</b></span>
+								<span class="grayFont">￥125.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="新琪奥丽滋养护理系列滋养去屑洗发露750ml" href="/goods/6059.html" target="_blank">
+							<img src="picture/thumb_20161215035336841_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="新琪奥丽滋养护理系列滋养去屑洗发露750ml" href="/goods/6059.html" target="_blank">新琪奥丽滋养护理系列滋养去屑洗发露750ml</a>
+							<div class="sales-vol">
+								销量：197
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥98.00</b></span>
+								<span class="grayFont">￥118.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="新琪奥丽滋养护理系列丰盈活力洗发露500ml" href="/goods/6058.html" target="_blank">
+							<img src="picture/thumb_20161214043806347_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="新琪奥丽滋养护理系列丰盈活力洗发露500ml" href="/goods/6058.html" target="_blank">新琪奥丽滋养护理系列丰盈活力洗发露500ml</a>
+							<div class="sales-vol">
+								销量：243
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥65.00</b></span>
+								<span class="grayFont">￥80.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="新琪蕰莎薑皇老姜营养洗发乳（防脱）300ml" href="/goods/6055.html" target="_blank">
+							<img src="picture/thumb_20170720114312697_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="新琪蕰莎薑皇老姜营养洗发乳（防脱）300ml" href="/goods/6055.html" target="_blank">新琪蕰莎薑皇老姜营养洗发乳（防脱）300ml</a>
+							<div class="sales-vol">
+								销量：1337
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥18.00</b></span>
+								<span class="grayFont">￥25.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="新琪姜汁王营养柔顺洗发露1000ml" href="/goods/6052.html" target="_blank">
+							<img src="picture/thumb_20161214051245377_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="新琪姜汁王营养柔顺洗发露1000ml" href="/goods/6052.html" target="_blank">新琪姜汁王营养柔顺洗发露1000ml</a>
+							<div class="sales-vol">
+								销量：371
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥45.00</b></span>
+								<span class="grayFont">￥55.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="新琪姜汁王营养柔顺洗发露500ml" href="/goods/6051.html" target="_blank">
+							<img src="picture/thumb_20161214022011594_1.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="新琪姜汁王营养柔顺洗发露500ml" href="/goods/6051.html" target="_blank">新琪姜汁王营养柔顺洗发露500ml</a>
+							<div class="sales-vol">
+								销量：384
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥33.00</b></span>
+								<span class="grayFont">￥42.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="佳佳利纯品美焕控油平衡洗发露480ml" href="/goods/6050.html" target="_blank">
+							<img src="picture/thumb_20161214021353854.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="佳佳利纯品美焕控油平衡洗发露480ml" href="/goods/6050.html" target="_blank">佳佳利纯品美焕控油平衡洗发露480ml</a>
+							<div class="sales-vol">
+								销量：488
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥88.00</b></span>
+								<span class="grayFont">￥108.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="佳佳利纯品美焕滋润柔顺洗发露760ml" href="/goods/6049.html" target="_blank">
+							<img src="picture/thumb_20161214020659952.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="佳佳利纯品美焕滋润柔顺洗发露760ml" href="/goods/6049.html" target="_blank">佳佳利纯品美焕滋润柔顺洗发露760ml</a>
+							<div class="sales-vol">
+								销量：345
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥145.00</b></span>
+								<span class="grayFont">￥168.00</span>
+							</div>
+						</div>
+						</li>
+						<li>
+						<div class="item-img">
+							<a title="佳佳利纯品美焕去屑调理洗发露760ml" href="/goods/6048.html" target="_blank">
+							<img src="picture/thumb_20161214015605327.jpg" alt="">
+							</a>
+						</div>
+						<div class="info">
+							<a class="name" title="佳佳利纯品美焕去屑调理洗发露760ml" href="/goods/6048.html" target="_blank">佳佳利纯品美焕去屑调理洗发露760ml</a>
+							<div class="sales-vol">
+								销量：287
+							</div>
+							<div class="price">
+								<span class="redFont"><b>￥145.00</b></span>
+								<span class="grayFont">￥168.00</span>
+							</div>
+						</div>
+						
+						</li>
+					</ul>
+					<div class="clearfix">
+					</div>
+					<div class="page page-bottom">
+														 1  
+						<a href='/products/549.html?&page=2' target='_self'>2</a><a href='/products/549.html?&page=3' target='_self'>3</a><a href='/products/549.html?&page=4' target='_self'>4</a><a href='/products/549.html?&page=2' target='_self'>下一页</a><a href='/products/549.html?&page=4' target='_self'>尾 页</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 商品 end -->
+		<div class="clearfix">
+		</div>
+	</div>
+</div>
+<!--  主要内容 end--><!-- 保证 -->
+<div class="assure grayBg">
+	<div class="m">
+		<ul>
+			<li class="item-1"></li>
+			<li class="item-2"></li>
+			<li class="item-3"></li>
+			<li class="item-4"></li>
+		</ul>
+	</div>
+</div>
+<!-- 保证 --><!-- start 底部导航 -->
+<div class="footer">
+	<div class="m">
+		<div class="footer-nav">
+			<dl class="footer-logo">
+				<dt style="position: relative;"><img src="picture/20161026021819439_3.png" alt=""><span class="footer-phonenum">020-86399919</span></dt>
+			</dl>
+			<dl>
+				<dt>购物帮助</dt>
+				<dd><a href="javascript:void(0)">会员注册</a></dd>
+				<dd><a href="javascript:void(0)">会员特权</a></dd>
+				<dd><a href="/shoppinglow.html">购物流程</a></dd>
+				<dd><a href="javascript:void(0)">订单查询</a></dd>
+			</dl>
+			<dl>
+				<dt>付款方式</dt>
+				<dd><a href="/onlinepay.html">在线支付</a></dd>
+				<dd><a href="/goodspay.html">货到付款</a></dd>
+			</dl>
+			<dl>
+				<dt>关于我们</dt>
+				<dd><a href="/about-us.html">了解我们</a></dd>
+				<dd><a href="/join-us.html">加入我们</a></dd>
+				<dd><a href="/contact-us.html">联系我们</a></dd>
+				<dd><a href="javascript:void(0)">合作伙伴</a></dd>
+			</dl>
+			<dl class="ewm" style="margin-left: 10px;">
+				<dt>
+				<img src="picture/20160912022808713_3.png">
+				</dt>
+				<dd class="redFont center">手机版商城</dd>
+			</dl>
+			<dl class="ewm">
+				<dt>
+				<img src="picture/20160912022816702_3.jpg">
+				</dt>
+				<dd class="redFont center">我爱美公众号</dd>
+			</dl>
+		</div>
+		<div class="links">
+			<div class="pull-left">
+				友情链接：
+			</div>
+			<div class="pull-right">
+				<a href="http://www.wammall.com/" target="_blank">美发工具</a>|
+				<a href="http://www.wammall.com/" target="_blank">美容用品</a>|
+				<a href="http://www.wammall.com/" target="_blank">美发用品</a>|
+				<a href="http://www.79.cn/mrhz/" target="_blank"> 化妆品店加盟</a>|
+				<a href="http://www.wammall.com/" target="_blank">美容美发用品批发</a>|
+				<a href="http://www.cloud-cn.com/" target="_blank">剃须刀片厂家</a>|
+				<a href="http://www.cloud-cn.com/" target="_blank">剃须刀片厂家</a>|
+				<a href="http://www.cloud-cn.com/" target="_blank">一次性剃须刀厂家</a>|
+				<a href="http://www.juzhew.com/" target="_blank">九块九包邮</a>|
+				<a href="http://www.meilele.com/category-dengguangyuan/" target="_blank">LED灯</a>|
+				<a href="http://www.ghjfs168.com/" target="_blank"> 品牌女装尾货批发</a>|
+				<a href="http://www.67bi.com/" target="_blank"> 67比购网</a>|
+				<a href="http://qm9.cn/" target="_blank"> 毛衣批发网</a>|
+				<a href="http://www.qqqnm.com/" target="_blank">海淘攻略</a>|
+				<a href="http://www.91lai.com/" target="_blank"> 海外代购</a>|
+				<a href="http://meifa.izhufu.net/" target="_blank"> 时尚发型</a>|
+				<a href="http://www.ntzzy.com/" target="_blank">杭州拍婚纱照</a>|
+				<a href="https://m.kuaidi100.com/" target="_blank">快递查询</a>|
+			</div>
+			<div class="clearfix">
+			</div>
+		</div>
+		<div class="copy">
+			<div class="pull-left">
+				<p style="PADDING-BOTTOM: 0px; MARGIN-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WHITE-SPACE: normal; MARGIN-BOTTOM: 0px; PADDING-TOP: 0px">
+					我爱美商城是汇聚行业最优质 美发工具， 美发用品， 美容用品， 美容工具等为一体的批发零售商城。
+				</p>
+				<p style="PADDING-BOTTOM: 0px; MARGIN-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WHITE-SPACE: normal; MARGIN-BOTTOM: 0px; PADDING-TOP: 0px">
+					<span style="PADDING-BOTTOM: 0px; MARGIN: 0px 10px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">地址：广州市白云区德汇望岗科技园D栋402</span>
+				</p>
+				<p style="PADDING-BOTTOM: 0px; MARGIN-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WHITE-SPACE: normal; MARGIN-BOTTOM: 0px; PADDING-TOP: 0px">
+					<span style="PADDING-BOTTOM: 0px; MARGIN: 0px 10px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">网站备案/许可证号：粤ICP备14053927号-1</span>&nbsp;<span style="PADDING-BOTTOM: 0px; MARGIN: 0px 10px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">© 2005-2017 我爱美商城 克劳德版权所有，并保留所有权利</span>
+				</p>
+				<p>
+					<br/>
+				</p>
+			</div>
+			<div class="pull-right">
+				<p style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: rgb(255,255,255); MARGIN-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: &#39;Microsoft YaHei&#39;, SimSun; WHITE-SPACE: normal; MARGIN-BOTTOM: 0px; COLOR: rgb(102,102,102); FONT-SIZE: 14px; PADDING-TOP: 0px">
+					邮箱：wam@wammall.com<br/>
+				</p>
+				<p style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: rgb(255,255,255); MARGIN-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: &#39;Microsoft YaHei&#39;, SimSun; WHITE-SPACE: normal; MARGIN-BOTTOM: 0px; COLOR: rgb(102,102,102); FONT-SIZE: 14px; PADDING-TOP: 0px">
+					<span style="PADDING-BOTTOM: 0px; MARGIN: 0px 10px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">全国服务热线：020-86399919</span>
+				</p>
+				<p>
+					<br/>
+				</p>
+			</div>
+			<div class="clearfix">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 底部导航 end--><!-- cnzz统计 -->

@@ -1,0 +1,24 @@
+{layout name="layout/layout" /}
+<!-- start 新品推荐 -->
+	<div class="new-product-rec">
+		<h2><div class="title">新品推荐<span class="blackFont">/</span><span class="eng">New Arrivals</span></div></h2>
+			<ul>
+				{foreach $new_products as $v}
+				<li class="inline-block">
+					<div class="item-img">
+						<a title="{$v.goodsname}" href="/goods/6527.html">
+							<img src="{$v.smallpic}" alt="">
+						</a>
+					</div>
+					<div class="info">
+						<p class="name omit"><a title="{$v.goodsname}" href="/goods/6527.html">{$v.goodsname}</a></p>
+						<p>
+							<span class="redFont"><b>￥{$v.price}</b></span>
+							<span class="grayFont"><s>￥148.00</s></span>
+						</p>
+					</div>
+				</li>
+				{/foreach}
+			</ul>
+	</div>
+<!-- 新品推荐 end-->

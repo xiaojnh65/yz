@@ -1,0 +1,39 @@
+<?php
+namespace app\admin\controller;
+use think\Db; 
+use app\admin\model\Colu as ColuModel;
+class Colu extends Common
+{
+    //栏目列表
+    public function lst(){
+        $colu = new coluModel();
+        $newColu = $colu->colutree();
+            // dump($newColu);exit;
+        $this->assign('newColu',$newColu); 
+        return view();
+    }
+
+    public function add(){
+        $colu = new coluModel();
+        if(request()->isPost()){
+            $result = $colu->data(input('post.'))->save();
+
+            if($result){
+                $this->success('添加栏目成功',url('lst'));
+            }else{
+                $this->error('添加栏目失败');
+            }
+            return;
+
+        }else{
+            $newColu = $colu->colutree();
+            // dump($newColu);exit;
+            $this->assign('newColu',$newColu);
+            return view();
+        }
+        
+    }
+
+    
+
+}

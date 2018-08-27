@@ -1,0 +1,74 @@
+<?php
+namespace app\admin\controller;
+use think\Db; 
+use app\admin\model\Article as ArticleModel;
+use think\Image;
+class Article extends Common
+{
+   private $filename; //该数组存放upload处理后的资源中SaveName，Filename
+   public function lst(){
+        $list = Db('article')->paginate(5);
+        // dump($list);exit;
+        $this->assign('list',$list);
+        return view();
+   } 
+
+   public function add(){
+        if(request()->isPost()){
+            $data['title'] = input('title');
+            $data['keywords'] = input('keywords');
+            $data['descr'] = input('descr');
+            $data['author'] = input('author');
+            $data['content'] = input('content');
+            $data['coluid'] = input('coluid');
+
+
+            //判断是否添加有图片
+            if($_FILES['pic']['error'] == 4){$this->error('请添加一张图片');}
+            // 上传图片
+            $this->filename = $this->upload();
+            //注意:必须拼接成下面这种格式才能删除
+            $pic = './uploads/'.$this->filename['dirname'].'/'.$this->filename['filename'];
+
+
+            $result = Db('article')->insert($data);
+            if($result){
+              $this->success('添加文章成功',url('lst'));
+            }else{
+              $this->error('添加文章失败');
+            }
+            return;
+
+      }else{
+        $colulist = Db('colu')->select();
+        $newColu = getCate($colulist, 0, 0);
+        $this->assign('newColu',$newColu); 
+        return view();
+      }
+  }
+
+        
+
+   public function edit(){
+        return view();
+   } 
+
+/*-----------------------------辅助方法---------------------*/
+  //上传图片
+  public function upload(){
+    // 获取表单上传文件
+    $file = request()->file('pic');
+    // 上传到框架应用根目录/public/uploads/ 目录下
+    $info = $file->validate(['size'=>356780,'ext'=>'jpg,png,gif'])->move(ROOT_PATH . 'public' . DS . 'uploads');
+    if($info){
+    // 成功上传后 获取上传信息
+       $filename['dirname'] = dirname($info->getSaveName()); 
+       $filename['filename'] = $info->getFilename();
+       return $filename;
+    }else{
+      // 上传失败获取错误信息
+      echo $file->getError();
+    }
+  }
+
+}

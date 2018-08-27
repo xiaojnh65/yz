@@ -1,0 +1,112 @@
+<!-- 保证 --><!-- start 底部导航 -->
+<div class="footer">
+	<div class="links">
+		<div class="pull-left">
+			友情链接：
+		</div>
+		<div class="pull-right">
+			<a href="http://www.wammall.com/" target="_blank">美发工具</a>|
+			<a href="http://www.wammall.com/" target="_blank">美容用品</a>|
+			<a href="http://www.wammall.com/" target="_blank">美发用品</a>|
+			<a href="http://www.79.cn/mrhz/" target="_blank"> 化妆品店加盟</a>|
+			<a href="https://m.kuaidi100.com/" target="_blank">快递查询</a>|
+		</div>
+		<div class="clearfix">
+		</div>
+	</div>
+	<div class="copy">
+		<div class="pull-left">
+			<p style="PADDING-BOTTOM: 0px; MARGIN-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WHITE-SPACE: normal; MARGIN-BOTTOM: 0px; PADDING-TOP: 0px">
+				<span style="PADDING-BOTTOM: 0px; MARGIN: 0px 10px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">地址：广西贵港市港北区新世纪广场西北面维多利亚小区</span>
+			</p>
+			<p style="PADDING-BOTTOM: 0px; MARGIN-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WHITE-SPACE: normal; MARGIN-BOTTOM: 0px; PADDING-TOP: 0px">
+				<span style="PADDING-BOTTOM: 0px; MARGIN: 0px 10px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">网站备案/许可证号：粤ICP备14053927号-1</span>&nbsp;<span style="PADDING-BOTTOM: 0px; MARGIN: 0px 10px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">© 2005-2017 妍挈美容商城 克劳德版权所有，并保留所有权利</span>
+			</p>
+			<p>
+				<br/>
+			</p>
+		</div>
+		<div class="pull-right">
+			<p style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: rgb(255,255,255); MARGIN-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: &#39;Microsoft YaHei&#39;, SimSun; WHITE-SPACE: normal; MARGIN-BOTTOM: 0px; COLOR: rgb(102,102,102); FONT-SIZE: 14px; PADDING-TOP: 0px">
+				<span style="PADDING-BOTTOM: 0px; MARGIN: 0px 10px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">服务热线：0775-9999999</span>
+			</p>
+			<p>
+				<br/>
+			</p>
+		</div>
+		<div class="clearfix">
+		</div>
+	</div>
+</div>
+</div>
+<!-- 底部导航 end--><!-- cnzz统计 -->
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none' id='cnzz_stat_icon_1259963726'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol
+    	     + "s11.cnzz.com/z_stat.php%3Fid%3D1259963726 ' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript" src="__INDEX__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__INDEX__/js/layer.js"></script>
+<script type="text/javascript" src="__INDEX__/js/base.js"></script>
+<script>
+			// 商品分类展示效果
+			categoryShow(true);
+			// 右侧边工具效果
+			sideTool();
+			//banner轮播图
+			(function(){
+				var index = 0,
+					lis = $('.banner-img li').length,
+					li_str = '',
+					timeShow;
+				for(var i = 0; i < lis; i++){
+					li_str+='<li></li>';
+				};
+				$('.banner-btn').html(li_str).find('li').eq(0).addClass('active');
+				$('.banner-img li').eq(0).show().animate({opacity: 1},0);
+				function show(index){
+					$('.banner-img li').eq(index).show().animate({zIndex:1,opacity: 1}, 500).siblings().animate({
+						zIndex: 0,
+						opacity: 0,
+						display: 'none'
+					},500);
+					$('.banner-btn li').eq(index).addClass('active').siblings().removeClass('active');
+				};
+				function autoPlay(){
+					timeShow = setInterval(function(){
+						index++;
+						if(index >= lis){
+							index = 0;
+						}
+						show(index);
+					}, 5000)
+				};
+				$('.banner').hover(function() {
+					clearInterval(timeShow)
+				}, function() {
+					autoPlay();
+				});
+				autoPlay();
+				$('.banner-btn li').on('click',function() {
+					index = $(this).index('.banner-btn li');
+					show(index);
+				});
+			}());
+		</script>
+</body>
+</html>
+<script>
+// AJAX判断登录状态
+$.ajax({
+	type : "GET",
+	url : "<?php echo url('Index/Webusers/ajaxChkLogin'); ?>", 
+	//上一行可以这样写: url : "{:url('Index/Webusers/ajaxChkLogin')}", 
+	dataType : "json",  // 指定服务器返回json
+	success : function(data)
+	{
+		if(data.ok == 1)
+			var html = "您好，"+data.username+" <a href='{:url("Index/Webusers/logout")}'>[退出]</a>";
+		else
+			var html = "您好，欢迎访问妍挈美容商城！[<a href='{:url("Index/Webusers/login")}'>登录</a>] [<a href='{:url("Index/Webusers/regist")}'>免费注册</a>] ";
+		$("#logInfo").html(html);
+	}
+});
+</script>

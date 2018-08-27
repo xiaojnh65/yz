@@ -1,0 +1,175 @@
+{include file="layout/header" /}
+<div style="clear:both;"></div>
+
+	<form action="{:url('Cart/order')}" method="post" name="order_form">
+	<!-- 主体部分 start -->
+	<div class="fillin w990 bc mt15">
+		<div class="fillin_hd">
+			<h2>填写并核对订单信息</h2>
+		</div>
+
+		<div class="fillin_bd">
+			<!-- 收货人信息  start-->
+			<div class="address">
+				<div class="address_select none">
+					
+						<ul>
+							<li>
+								<label for=""><span>*</span>收货人：</label>
+								<input type="text" name="shr_name" class="txt" />
+							</li>
+							<li>
+								<label for=""><span>*</span>所在地区:</label>
+								<select name="shr_province" id="">
+									<option value="">请选择</option>
+									<option value="北京">北京</option>
+									<option value="上海">上海</option>
+									<option value="天津">天津</option>
+									<option value="重庆">重庆</option>
+									<option value="武汉">武汉</option>
+								</select>
+
+								<select name="shr_city" id="">
+									<option value="">请选择</option>
+									<option value="朝阳区">朝阳区</option>
+									<option value="东城区">东城区</option>
+									<option value="西城区">西城区</option>
+									<option value="海淀区">海淀区</option>
+									<option value="昌平区">昌平区</option>
+								</select>
+
+								<select name="shr_area" id="">
+									<option value="">请选择</option>
+									<option value="西二旗">西二旗</option>
+									<option value="西三旗">西三旗</option>
+									<option value="三环以内">三环以内</option>
+								</select>
+							</li>
+							<li>
+								<label for=""><span>*</span>详细地址:</label>
+								<input type="text" name="shr_address" class="txt address"  />
+							</li>
+							<li>
+								<label for=""><span>*</span>手机号码:</label>
+								<input type="text" name="shr_tel" class="txt" />
+							</li>
+						</ul>
+					</form>
+					<a href="" class="confirm_btn"><span>保存收货人信息</span></a>
+				</div>
+			</div>
+			<!-- 收货人信息  end-->
+
+			<!-- 配送方式 start -->
+			<div class="delivery">
+				<h3>送货方式 </h3>
+				<div class="delivery_select none">
+					<table>
+						<thead>
+							<tr>
+								<th class="col1">送货方式</th>
+								<th class="col2">运费</th>
+								<th class="col3">运费标准</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								
+								<td><input type="radio" name="post_method" value="顺丰快递" />顺丰快递</td>
+								<td>￥40.00</td>
+								<td>每张订单不满499.00元,运费40.00元, 订单4...</td>
+							</tr>
+							<tr>
+								
+								<td><input type="radio" name="post_method" value="圆通快递" />圆通快递</td>
+								<td>￥40.00</td>
+								<td>每张订单不满499.00元,运费40.00元, 订单4...</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div> 
+			<!-- 配送方式 end --> 
+
+			<!-- 支付方式  start-->
+			<div class="pay">
+				<h3>支付方式 </h3>
+				<div class="pay_select none">
+					<table> 
+						<tr class="cur">
+							<td class="col1"><input type="radio" name="pay_method" value="支付宝" />支付宝</td>
+							<td class="col2">送货上门后再收款，支持现金、POS机刷卡、支票支付</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!-- 支付方式  end-->
+
+			<!-- 商品清单 start -->
+			<div class="goods">
+				<h3>商品清单</h3>
+				<table>
+					<thead>
+						<tr>
+							<th class="col1">商品</th>
+							<th class="col2">图片</th>
+							<th class="col3">价格</th>
+							<th class="col4">数量</th>
+							<th class="col5">小计</th>
+						</tr>	
+					</thead>
+					<tbody>
+						<?php $total=0;$num=0; ?>
+						{foreach $list as $v}
+						<tr goods_id="{$v.goods_id}">
+							<td class="col1" align="center"><a href=""></a>  <strong><a href="">{$v.goods_name}</a></strong></td>
+							<td class="col2" align="center"><img src="{$v.smallpic}" alt="" /></td>
+							<td class="col3" align="center">￥<span>{$v.price}</span></td>
+							<td class="col4"> 
+								{$v.goods_number}
+							</td>
+							<td class="col5" align="center">￥<span><?php echo $v['goods_number']*$v['price'];$total += $v['goods_number']*$v['price'];$num += $v['goods_number']; ?></span></td>
+						</tr>
+						<?php ?>
+						{/foreach}
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="5">
+								<ul>
+									<li>
+										<span><?php echo $num; ?> 件商品，总商品金额：</span>
+										<em>￥<?php echo $total; ?></em>
+									</li>
+									<li>
+										<span>返现：</span>
+										<em>-￥240.00</em>
+									</li>
+									<li>
+										<span>运费：</span>
+										<em>￥10.00</em>
+									</li>
+									<li>
+										<span>应付总额：</span>
+										<em>￥5076.00</em>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			<!-- 商品清单 end -->
+		
+		</div>
+
+		<div class="fillin_ft">
+			<a onclick="$('form[name=order_form]').submit();" href="javascript:void(0);"><span>提交订单</span></a>
+			<p>应付总额：<strong>￥5076.00元</strong></p>
+			
+		</div>
+	</div>
+	<!-- 主体部分 end -->
+</form>
+
+{include file="layout/footer" /}

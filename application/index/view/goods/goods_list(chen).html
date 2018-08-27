@@ -1,0 +1,60 @@
+{layout name="layout/layout" /}
+
+<!-- 导航 end -->		<!-- start 主要内容 -->
+		<div class="content m">
+			<!--start 面包屑 -->
+			<div class="root-nav">
+				<div class="breadcrumb">
+					<strong><a href="file:///C:/products/549.html">洗发</a></strong>				</div>
+			</div>
+			<!-- 面包屑 end -->
+
+			<div class="main">
+				<div class="attrs m">
+				</div>
+			</div>
+				<!-- start 商品 -->
+				<div class="product">
+					<div class="product-con">
+						<!-- 相关推荐 -->
+						
+						<!-- 商品列表 -->
+						<div class="right pull-right">
+							<div class="right-top">
+								<div>
+									<a href="file:///C:/products/549.html?key=&amp;section=&amp;brandid=0&amp;order=&amp;sort=">综合排序</a>
+									<a href="file:///C:/products/549.html?key=&amp;section=&amp;brandid=0&amp;order=1&amp;sort=2" target="_self">销量<i class=""></i></a><a href="file:///C:/products/549.html?key=&amp;section=&amp;brandid=0&amp;order=2&amp;sort=2" target="_self">价格<i class=""></i></a>								</div>
+								
+							</div>
+
+								
+									{foreach $goods_list as $v}
+								
+									<div class="item-img">
+										<a title="{$v.goodsname}" href="{:url('Goods/goods')}?id={$v.id}" target="_blank">
+											<img src="{$v.smallpic}" alt="">
+										</a>
+									</div>
+									<div class="info">
+										<a class="name" title="{$v.goodsname}" href="{:url('Goods/goods')}?id={$v.id}" target="_blank">{$v.goodsname}</a>
+										<div class="sales-vol">销量：1212</div>
+										<div class="price">
+											<span class="redFont"><b>￥60.00</b></span>
+											<span class="grayFont">￥95.00</span>
+										</div>
+									</div>
+
+									{/foreach}
+
+							<div class="clearfix"></div>
+							<div class="page page-bottom">
+														 1  <a href="file:///C:/products/549.html?&amp;page=2" target="_self">2</a>  <a href="file:///C:/products/549.html?&amp;page=3" target="_self">3</a>  <a href="file:///C:/products/549.html?&amp;page=4" target="_self">4</a>  <a href="file:///C:/products/549.html?&amp;page=2" target="_self">下一页</a>  <a href="file:///C:/products/549.html?&amp;page=4" target="_self">尾 页</a> 														</div>
+						</div>
+					</div>
+				</div>
+				<!-- 商品 end -->
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!--  主要内容 end-->
+

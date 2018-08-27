@@ -1,0 +1,478 @@
+{layout name="layout/layout" /}
+
+<!-- 导航 end -->	<!-- start 头部 -->
+		<div class="wrap m">
+			<div class="content">
+				<!--start 面包屑 -->
+				<div class="root-nav">
+					<div class="breadcrumb">
+						<h2>当前位置：<a href="{:url('Index/index')}">首页</a> > 
+							<?php foreach($breadcrumb as $v):?>
+							<a href="{:url('Goods/goods_list')}?cid={$v.id}">{$v.name}</a> > 
+						    <?php endforeach; ?>
+							<?php echo $goods['goodsname']?></h2>
+					</div>
+				</div>
+				<!-- 面包屑 end -->
+
+
+		
+
+
+				<!--start 商品简介 -->
+				<div class="product-intro">
+					<!-- start 图片放大镜 -->
+					<div class="preview">
+						<!-- 主图 -->
+						<div class="product-pic">
+							<div class="zoom">
+								<div class="zoom-pic">
+								</div>
+							</div>
+						</div>
+						<!-- 小图 -->
+						<div class="pic-list">
+							<div class="control forward"></div>
+							<div class="control backward"></div>
+							<div class="product-pic-s">
+								<ul class="">
+									{foreach $goodsimg as $val}
+									<li data-img="">
+										<img src="{$val['smallpic']}">
+									</li>
+									{/foreach}
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- 图片放大镜 end-->
+					<div class="item-inner">
+						<div class="name">
+							<img src="{$goods.smallpic}">	
+							<h2 class="p_name">{$goods.goodsname}</h2>
+							<span class='serial'>商品编码：{$goods.id}</span>
+							<span class='num'>库存：176</span>
+						</div>
+						<div class="summary">
+							<!--start 价格区域 -->
+							<div class="summary-info">
+								<div class="price-box">
+
+
+                        		<s><span id="atprice">市场价：￥{$goods.market_price}</span></s>
+                        		<input type="hidden" id="atpriceDef" value="市场价：￥{$goods.market_price}">
+                        		<span id="elprice"><span>VIP会员价：￥{$goods.price}</span></span><input type="hidden" id="elpriceDef" value=" <span>VIP会员价：￥{$goods.price}</span>                     			                        		">
+									<div class="redFont">我的价格：<b id="myPrice">￥<span>{$goods.price}</span></b></div>
+									<input type="hidden" id="myPriceDef" value="￥<span>{$goods.price}</span>">
+								    <div class="grayFont">销量：<span>1213件</span></div>
+								</div>
+							</div>
+							<!-- 价格区域 end-->
+
+							<!--start 属性选择 -->
+							<form action="{:url('Cart/add')}" method="post">
+							<input type="hidden" name="id" value="{$goods.id}">	
+							<div class="choose">
+								<div class="choose-item">
+									<div class="dd">选择数量：</div>
+									<div class="dt">
+										<div class="quantity-box">
+											<div class="quantity-s quantityDecrease">-</div>
+											<input type="text" class="quantity-s" value="1" name='num' id='num'>
+											<div class="quantity-s quantityDncrease">+</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<button type="submit" class="red-btn addCart">
+										<span class="cart-icon"></span>
+										<span>加入购物车</span>
+									</button>
+									<span class="redFont">
+									</span>
+								</div>
+							</div>
+							</form>
+							<!--属性选择 end-->
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!--商品简介 end-->
+
+				<!-- start 套餐 -->
+				<!-- 套餐 end -->
+
+				<!-- start 商品详情 -->
+					<div class="product-det">
+						
+						<div class="right pull-right">
+							<!-- start 选项卡 -->
+								<div class="product-tab">
+									<ul class="tab-name">
+										<li class="active">商品详情</li>
+									</ul>
+									<div class="clearfix"></div>
+									<div class="tab-con">
+										<!-- 商品详情 -->
+										<div class="item active">
+											<div class="head">
+												<div class="pull-left">品牌：<span>新琪</span></div>
+												<div class="pull-left">产地：<span></span></div>
+												<div class="pull-left">规格：<span>6瓶/件</span></div>
+											<div class="clearfix"></div>
+											</div>
+										<div class="item-con">
+										<br>
+										</div>
+										</div>
+										<!-- 规格参数 -->
+										<div class="item">
+											<div class="item-con">
+												<table>
+												</table>
+											</div>
+										</div>
+										<!-- 用户评价 -->
+										<div class="item comment">
+											<h2 class="pA-10 font-18">用户评价</h2>
+											<ul class="comment-tab-name">
+												<li>全部评价</li>
+												<li>好评</li>
+												<li>中评</li>
+												<li>差评</li>
+												<li>晒单</li>
+											</ul>
+									<!--  start 分页 -->
+									<div class="page page-bottom">
+												<a href="">上一页</a>
+												<a href="" class="active">1</a>
+												<a href="">2</a>
+												<a href="">3</a>
+												<b>...</b>
+												<a href="">87</a>
+												<a href="">88</a>
+												<a href="">89</a>
+												<a href="">下一页</a>
+											</div>
+											<!--  分页 end -->
+										</div>
+										<!-- 售后服务 -->
+										<div class="item">
+											<div class="item-con">售后服务</div>
+										</div>
+										<!-- 如何购买 -->
+										<div class="item">
+											<div class="item-con">如何购买</div>
+										</div>
+									</div>
+								</div>
+							<!-- 选项卡 end -->
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				<!-- 商品详情 end -->
+			</div>
+		</div>
+<!-- cnzz统计 -->
+     <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none' id='cnzz_stat_icon_1259963726'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol
+    	     + "s11.cnzz.com/z_stat.php%3Fid%3D1259963726 ' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript" src="js/jquery.min_2.js" ></script>
+<script type="text/javascript" src="js/base_2.js" ></script>
+<script type="text/javascript" src="js/layer_2.js" ></script><script>
+	$(function(){
+		// 商品分类展示效果
+		categoryShow(true);
+
+		// 右侧边工具效果
+		sideTool();
+
+		//初始化属性选择框
+		//$("input[name='attrid']").val(0);
+		$("input[name='num']").val(1);
+
+
+	});
+
+</script>
+<script>
+var updateurl = "/cart/get-cart-count.html";
+
+var images = new Array();
+	images[7974] = new Array();
+		images[7974][0] = new Array();
+	images[7974][0]['img_url'] = "http://img.wammall.com/2017/0504/20170504024636874.jpg";
+	images[7974][0]['thumb_url'] = "http://img.wammall.com/2017/0504/thumb_20170504024636874.jpg";
+	images[7974][0]['thumb_s_url'] = "http://img.wammall.com/2017/0504/thumb_s_20170504024636874.jpg";
+		images[7974][1] = new Array();
+	images[7974][1]['img_url'] = "http://img.wammall.com/2017/0504/20170504024642542.jpg";
+	images[7974][1]['thumb_url'] = "http://img.wammall.com/2017/0504/thumb_20170504024642542.jpg";
+	images[7974][1]['thumb_s_url'] = "http://img.wammall.com/2017/0504/thumb_s_20170504024642542.jpg";
+	
+var faceimg = '';
+if(faceimg){
+	var bstr = '<img class="img-s" src="'+faceimg+'" alt="" style="width:400px" data-img="'+faceimg+'">';
+	$(".product-pic .zoom-pic").html(bstr);
+}
+
+
+	//商品属性
+	Hub = {};
+	Hub.config = {
+        config: {},
+        get: function(key) {
+            if (key in this.config) {
+                return this.config[key];
+            } else {
+                return null;
+            }
+        },
+        set: function(key, val) {
+            this.config[key] = val;
+        }
+    };
+	Hub.config.set(
+		'sku',{
+			valItemInfo:{";0:d41d8cd98f00b204e9800998ecf8427e;":{"id":"7974","price":"50.00","n_price":"75.00","attr_price":"70.00","attr_vprice":"50.00","n_attr_vprice":"75.00","serial":"2877970000002","num":176,"name":"\u65b0\u742a\u6d77\u85fb\u8425\u517b\u6ecb\u6da6\u6d17\u53d1\u4e735L","buy_type":2}}		}
+	);
+	Hub.config.set(
+		'param',{
+			lpparams : {"member_see_price":{"7":[4,8,6,7],"6":[4,8,6],"5":[4,8,6],"8":[8],"4":[4]},"member_price_field":{"7":"attr_aprice","6":"attr_bprice","5":"attr_bprice","8":"attr_vprice","4":"attr_pricespe","16":"attr_jprice"},"member_level":{"7":"\u52a0\u76df\u5546","6":"\u94bb\u77f3\u4f1a\u5458","5":"\u91d1\u724c\u4f1a\u5458","8":"VIP\u4f1a\u5458","4":"\u666e\u901a\u4f1a\u5458"},"lev":8,"stock_way":"1"}		}
+	);
+	// 选项卡切换效果
+	$('.product-tab .tab-name li').on('click',function(){
+		var index = $(this).index('.product-tab .tab-name li');
+		$(this).addClass('active').siblings().removeClass('active');
+		$('.product-tab .item').eq(index).addClass('active').siblings().removeClass('active');
+	})
+	$(document).on('click', '.addCart', function(){
+		var attrId = $("input[name='attrid']").val();
+		var quantity = $("input[name='num']").val();
+		addCart(attrId, quantity);
+	})
+
+	$('.choose-item').on('click','li',function(){
+
+		if($(this).attr("class")=='noactive') return;
+		$(this).toggleClass('active').siblings().removeClass('active');
+		$(this).removeClass('noactive');
+		var selectedObjs = $('.choose-item').find('.active');
+		var selectedIds = [];
+		selectedObjs.each(function() {
+			selectedIds.push($(this).attr('data-value'));
+		});
+		selectedIds.sort();
+
+		//选中商品属性时样式
+		checkGoodsStyle(selectedObjs, selectedIds);
+
+		//选中商品时属性时价格
+		checkGoodsPrice(selectedObjs, selectedIds);
+
+	})
+
+	function checkGoodsStyle(selectedObjs, selectedIds)
+	{
+		if(selectedObjs.length){
+			var len = selectedIds.length;
+			var active = $(".choose-item").find("li").not(".active");
+			active.addClass('noactive');
+			for(var j=0; j<active.length; j++)
+			{
+				for(var o in Hub.config.get('sku').valItemInfo)
+				{
+					var s = 0;
+					for(var i=0; i<len; i++)
+					{
+						if(o.match(selectedIds[i]))
+						{
+							s++;
+						}
+					}
+					if(s==len)
+					{
+						if( o.match(active.eq(j).attr('data-value'))!=null )
+						{
+							active.eq(j).removeClass('noactive');
+						}
+					}
+				}
+			}
+			if(len==1)
+			{
+				$('.active').siblings().removeClass('noactive');
+			}
+		}
+		else
+		{
+			$(".choose-item").find("li").removeClass('noactive');
+		}
+	}
+
+	function checkGoodsPrice(selectedObjs, selectedIds)
+	{
+		$("input[name='num']").val(1);
+		if(selectedObjs.length){
+			if(Hub.config.get('sku').valItemInfo[';'+selectedIds.join(";")+';'])
+			{
+				$("#myPrice").html('￥'+(Hub.config.get('sku').valItemInfo[';'+selectedIds.join(";")+';'].price));
+				$("#atprice").html('市场价：￥'+(Hub.config.get('sku').valItemInfo[';'+selectedIds.join(";")+';'].attr_price));
+				var attrid = Hub.config.get('sku').valItemInfo[';'+selectedIds.join(";")+';'].id;
+				var lev = Hub.config.get('param').lpparams.lev;
+				var leves = Hub.config.get('param').lpparams.member_see_price[Hub.config.get('param').lpparams.lev];
+				var price_field = Hub.config.get('param').lpparams.member_price_field;
+				var member_level = Hub.config.get('param').lpparams.member_level;
+				var html = '';
+				for(var l in leves)
+				{
+					if(leves[l] != lev)
+					{
+						 html += '<s>';
+					}
+					var pre = leves[l] == 16 ? '进货价：￥' : member_level[leves[l]]+'价：￥';
+					html += pre;
+					html += '<span>'+Hub.config.get('sku').valItemInfo[';'+selectedIds.join(";")+';'][price_field[leves[l]]]+'</span>';
+					if(leves[l] != lev)
+					{
+						 html += '</s>';
+					}
+				}
+				var num =Hub.config.get('sku').valItemInfo[';'+selectedIds.join(";")+';'].num;
+				var stock_way = Hub.config.get('param').lpparams.stock_way;
+				$("#elprice").html(html);
+				$("input[name='attrid']").val(attrid);
+				$(".serial").html('商城编码：'+Hub.config.get('sku').valItemInfo[';'+selectedIds.join(";")+';'].serial);
+				$(".num").html('库存：'+num);
+				$(".p_name").html(Hub.config.get('sku').valItemInfo[';'+selectedIds.join(";")+';'].name);
+				if(images[attrid])
+				{
+					showImg(images[attrid]);
+				}
+				if(stock_way == 0 && num <= 0){
+					$(".addCart").addClass('disableBg-btn').attr('disabled',true).children('.cart-icon').siblings().html('缺货');
+				}else {
+					$(".addCart").removeClass('disableBg-btn').attr('disabled',false).children('.cart-icon').siblings().html('加入购物车');
+				}
+			}
+			else
+			{
+				$("#myPrice").html($('#myPriceDef').val());
+				$('#atprice').html($('#atpriceDef').val());
+				$('#elprice').html($('#elpriceDef').val());
+				$("input[name='attrid']").val(0);
+			}
+		}
+		else
+		{
+			$("#myPrice").html($('#myPriceDef').val());
+			$('#atprice').html($('#atpriceDef').val());
+			$('#elprice').html($('#elpriceDef').val());
+			$("input[name='attrid']").val(0);
+			$(".addCart").removeClass('disableBg-btn').attr('disabled',false).children('.cart-icon').siblings().html('加入购物车');
+		}
+
+	}
+
+	//已选属性刷新
+    function freshSelectedAttr() {
+        var select_attr_txt = new Array();
+        $('.choose-item label.active').each(function(){
+            select_attr_txt.push($(this).text());
+        });
+        select_attr_txt.push($('#num').val() + '件');
+        $('#selected_attr').html(select_attr_txt.join(','));
+    }
+
+	//库存加减操作
+    $('.quantityDecrease ').on('click',function() {
+        var oldval = parseInt($('#num').val());
+        if(oldval > 1) {$('#num').val(oldval-1);}
+        freshSelectedAttr();
+    });
+
+    $('.quantityDncrease  ').on('click',function() {
+        var oldval = parseInt($('#num').val());
+        $('#num').val(oldval+1);
+        freshSelectedAttr();
+    });
+
+	function trim(param) {
+		return param.replace(/(^;*)|(;*$)/g, "");
+	}
+
+	function showImg(imgArr)
+	{
+		if(imgArr.length)
+		{
+			var str = '';
+			for(var i=0; i<imgArr.length; i++)
+			{
+				str += '<li data-img="'+imgArr[i]['img_url']+'" class="jqzoom">';
+				str += '<img src="'+imgArr[i]['thumb_s_url']+'" alt="">';
+				str += '</li>';
+			}
+
+			$(".product-pic-s > ul").html(str);
+			$('.product-pic-s ul').css('width' , $('.product-pic-s ul li').length*80);
+
+			if(faceimg == ''){
+    			var bstr = '<img class="img-s" src="'+imgArr[0]['img_url']+'" alt="" style="width:400px" data-img="'+imgArr[0]['img_url']+'">';
+    			$(".product-pic .zoom-pic").html(bstr);
+			}
+			$('.product-pic-s li').on('mousemove',function(){
+				$(this).addClass('active') .siblings().removeClass('active');
+				$('.product-pic .img-s').attr('src',$(this).data('img')).attr('data-img',$(this).data('img'));
+			});
+		}
+	}
+
+	$(document).ready(function(){
+		if(images[7974]) showImg(images[7974]);
+		freshSelectedAttr();
+			});
+
+    //添加购物车
+    var inCart = 0;
+    function addCart(attrId, quantity) {
+       // var url = '/cart/add.html';
+       var url = '/Index/Goods/addcart.html';
+       var attrId = parseInt(attrId);
+       var quantity = parseInt(quantity);
+       if(attrId <= 0) {
+           layer.msg('请选择产品属性');
+           return;
+       }
+       if(quantity <= 0) {
+    	   layer.msg('购买数量不能为空');
+           return;
+       }
+       layer.load(2);
+        $.post(url, {'attr_id': attrId, 'quantity': quantity}, function(data) {
+     	    layer.closeAll('loading');
+            if(data.code != '20001') {
+            	layer.msg(data.msg);
+                return;
+            }
+            updateCart(updateurl); //更新购物车数量
+            inCart = 1;
+            layer.msg('成功添加到购物车');
+        }, 'json');
+    }
+
+    //记录访问商品信息
+    var str_time  = (Date.parse(new Date())) / 1000;
+    $(window).bind('beforeunload', function(){
+        var liv_time  = (Date.parse(new Date())) / 1000;
+        var sta_time = liv_time - str_time; //停留时间
+        var attr_id = $("input[name='attrid']").val();
+        var productid = '6554';
+        if(sta_time > 0)
+        {
+            var url = '/goods/read-log.html';
+            $.post(url, {'attrid':attr_id, 'products_id':productid, 'time':sta_time, 'inCart':inCart},
+                function(data){ }, "json");
+        }
+    });
+</script>
+
+<script type="text/javascript" src="js/pyzoom.js" ></script>

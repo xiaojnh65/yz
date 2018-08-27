@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html><head>
+        <meta charset="utf-8">
+    <title>童老师ThinkPHP交流群：484519446</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- 头部 -->
+    {include file="public/top" /}   
+
+    <!-- /头部 -->
+    
+    <div class="main-container container-fluid">
+        <div class="page-container">
+            <!-- Page Sidebar -->
+            {include file="public/left" /} 
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="#">系统</a>
+                    </li>
+                                        <li class="active">配置管理</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<button type="button" tooltip="添加配置" class="btn btn-sm btn-azure btn-addon" >网站配置
+</button>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                <form action="" method="post">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr>
+                                <th class="text-right" width="10%">配置名称</th>
+                                <th class="text-left">配置值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {foreach $list as $v}
+                            <tr>
+                                <td align="right">{$v.cnname}</td>
+                                <td align="left">
+                                    <?php if($v['type'] == 1):?>
+                                        <input class="form-control" style="width:620px" type="text" name="{$v.enname}" value="{$v.value}">
+                                    <?php elseif($v['type'] == 2):?>
+                                        <textarea class="form-control" style="width:620px" name="{$v.enname}">
+                                            {$v.value}
+                                        </textarea>
+                                    <?php elseif($v['type'] == 3):
+                                        if($v['values']){
+                                            $arrradio = explode(',', $v['values']);
+                                        }
+                                    ?>
+                                        <?php foreach ($arrradio as $v1):?>
+                                            <label style="margin-right:20px">
+                                                <input <?php if($v['value'] == $v1){echo 'checked="checked"';} ?> name="{$v.enname}" value="{$v1}" type="radio" > 
+                                                <span class="text">{$v1}</span>
+                                            </label>
+                                        <?php endforeach;?>
+                                    <?php elseif($v['type'] == 4):?>
+                                        <label>
+                                            <input <?php if($v['value'] == $v['values']){echo 'checked="checked"';} ?> type="checkbox" class="colored-success" name="{$v.enname}" value="{$v.values}" >
+                                            <span class="text">{$v.values}</span>
+                                        </label>
+                                    <?php elseif($v['type'] == 5):
+                                        if($v['values']){
+                                            $arrselect = explode(',', $v['values']);
+                                        }
+                                    ?>
+                                        <select name="{$v.enname}">
+                                            <?php foreach ($arrselect as $v2):?>
+                                            <option <?php if($v['value'] == $v2){echo 'selected="selected"';} ?> value="{$v2}">{$v2}</option>
+                                            <?php endforeach;?>
+                                        </select>
+                                    <?php endif;?>
+                                </td>
+                            </tr>
+                            {/foreach}
+                       </tbody>
+                    </table>
+                    <div>
+                        <input type="submit" value="提交修改" class="btn btn-primary btn-sm shiny" style="margin-left:665px; margin-top:10px">
+                    </div>
+                </form>
+                </div>
+                <div style="padding-top: 10px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+        </div>  
+    </div>
+
+        <!--Basic Scripts-->
+    <script src="__ADMIN__/style/jquery_002.js"></script>
+    <script src="__ADMIN__/style/bootstrap.js"></script>
+    <script src="__ADMIN__/style/jquery.js"></script>
+    <!--Beyond Scripts-->
+    <script src="__ADMIN__/style/beyond.js"></script>
+    
+
+
+</body></html>
